@@ -17,9 +17,9 @@ class LineBuilder implements Line {
     private String label;
     private char endOfLinePunctuation;
 
-    final static char CR = '\n';
-    final static char SEMI_COLON = ';';
-    final static char FULL_STOP = '.';
+    static final char CR = '\n';
+    static final char SEMI_COLON = ';';
+    static final char FULL_STOP = '.';
 
     LineBuilder(Function<StringBuilder, Text> observer) {
         Objects.requireNonNull(observer, "Builder is required");

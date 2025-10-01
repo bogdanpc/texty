@@ -8,13 +8,15 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class TextyTest {
 
+    public static final String COLORS = "Colors";
+
     @Test
     void text_works_all_api() {
 
         var text = Texty
                 .newBuilder()
                 .line().append("Hello").label("Greetings").endLine()
-                .line(List.of("red", "blue", "orange")).label("Colors").endsWith(';').endLine()
+                .line(List.of("red", "blue", "orange")).label(COLORS).endsWith(';').endLine()
                 .line("1").label("Numbers").endLine()
                 .newLine()
                 .line("A").append("B").append("C").append("").endLine()
@@ -25,7 +27,7 @@ class TextyTest {
                 Greetings: Hello
                 Colors: red, blue, orange;
                 Numbers: 1
-                               
+                
                 ABC
                 Supplier\
                 """);
@@ -63,8 +65,8 @@ class TextyTest {
     void end_of_line_punctuation() {
         var text = Texty
                 .newBuilder()
-                .line(List.of("red", "blue")).label("Colors").endsWith(LineBuilder.SEMI_COLON).endLine()
-                .line(List.of("black", "white")).label("Colors").endsWith(LineBuilder.FULL_STOP).endLine()
+                .line(List.of("red", "blue")).label(COLORS).endsWith(LineBuilder.SEMI_COLON).endLine()
+                .line(List.of("black", "white")).label(COLORS).endsWith(LineBuilder.FULL_STOP).endLine()
                 .build();
 
         assertThat(text).isEqualTo("""

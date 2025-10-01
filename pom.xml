@@ -6,7 +6,7 @@
 
     <groupId>org.meanwhile</groupId>
     <artifactId>texty</artifactId>
-    <version>0.1.0</version>
+    <version>0.2.0</version>
 
     <scm>
         <connection>scm:git:git@github.com:bogdanpc/texty.git</connection>
@@ -19,8 +19,8 @@
 
 
     <properties>
-        <compiler-plugin.version>3.14.0</compiler-plugin.version>
-        <maven.compiler.release>17</maven.compiler.release>
+        <compiler-plugin.version>3.14.1</compiler-plugin.version>
+        <maven.compiler.release>25</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -53,7 +53,7 @@
             <properties>
                 <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
                 <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
-                <quarkus.platform.version>3.26.1</quarkus.platform.version>
+                <quarkus.platform.version>3.28.1</quarkus.platform.version>
             </properties>
             <dependencyManagement>
                 <dependencies>
